@@ -1,0 +1,59 @@
+body {
+    background-color: #121213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.word-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.letter-square {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 1.2em;
+    color: #ffff;
+    text-decoration: none;
+    background-color: #333;
+}
+
+.letter-square.incorrect {
+    animation: shake 0.5s ease-in-out;
+    background-color: #FF4D4D; /* Red */
+    color: #fff; /* set text color for visibility */
+}
+
+.letter-square.correct-position {
+    background-color: #4CAF50; /* Green */
+    color: #fff; /* set text color for visibility */
+}
+
+.letter-square.correct-letter {
+    background-color: #FFD700; /* Amber */
+    color: #fff; /* set text color for visibility */
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 50%, 80% {
+        transform: translateX(-5px);
+    }
+    40%, 60% {
+        transform: translateX(5px);
+    }
+}
