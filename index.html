@@ -7,17 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <!-- Rows for guesses -->
-        <div class="word-row" id="wordRow1"></div>
-        <div class="word-row" id="wordRow2"></div>
-        <div class="word-row" id="wordRow3"></div>
-        <div class="word-row" id="wordRow4"></div>
-        <div class="word-row" id="wordRow5"></div>
-
-        <!-- Current active row for the player's guess -->
-        <div class="word-row active-row" id="activeRow"></div>
+    <!-- Main Page -->
+    <div id="mainPage">
+        <h1>WORD GAME</h1>
+        <p>Created by Vyom Devgan</p>
+        <div id="instructions">
+        <p>Instructions:</p>
+        <ul>
+            <li>Guess the word in the given category</li>
+            <li>You have 6 total tries</li>
+            <li>Colours represent the relevance of each letter</li>
+            <li><span class="green">Green:</span> Correct Letter & Correct Position</li>
+            <li><span class="yellow">Yellow:</span> Correct Letter & Wrong Position</li>
+            <li><span class="red">Red:</span> Wrong Letter</li>
+        </ul></div>
+        <button onclick="startGame()">Play</button>
     </div>
+
+    <!-- Game Page -->
+    <div id="gamePage" style="display: none;">
+        <div class="top-box">
+            <!-- Content for the top box -->
+            <p>This is the top box content</p>
+        </div>
+    
+        <div class="game-container">
+            <!-- Rows for guesses -->
+            <div class="word-row" id="wordRow1"></div>
+            <div class="word-row" id="wordRow2"></div>
+            <div class="word-row" id="wordRow3"></div>
+            <div class="word-row" id="wordRow4"></div>
+            <div class="word-row" id="wordRow5"></div>
+    
+            <!-- Current active row for the player's guess -->
+            <div class="word-row active-row" id="activeRow"></div>
+        </div>
+    
+        <div class="left-box">
+            <!-- Content for the left box -->
+            <p>This is the left box content</p>
+        </div>
+    
+        <div class="right-box">
+            <!-- Content for the right box -->
+            <p>This is the right box content</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        function startGame() {
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('gamePage').style.display = 'flex';
+            initializeGame();
+        }
+    </script>
 </body>
 </html>
