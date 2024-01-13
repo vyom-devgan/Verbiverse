@@ -7,16 +7,89 @@ body {
     margin: 0;
 }
 
+#mainPage {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#mainPage h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+#mainPage p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#mainPage button {
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#mainPage button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#mainPage .green {
+    color: #4CAF50; /* Green */
+}
+
+#mainPage .yellow {
+    color: #FFD700; /* Yellow */
+}
+
+#mainPage .red {
+    color: #FF4D4D; /* Red */
+}
+
+#gamePage {
+    display: grid;
+    grid-template-areas:
+        "top-box top-box top-box"
+        "left-box game-container right-box";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100vh;
+    width: 100vm;
+}
+
+.top-box {
+    grid-area: top-box;
+    /* Add styles for the top box */
+}
+
 .game-container {
+    grid-area: game-container;
+    /* Styles for the game container */
     text-align: center;
 }
 
-.word-row {
+.left-box {
+    grid-area: left-box;
+    /* Add styles for the left box */
+}
+
+.right-box {
+    grid-area: right-box;
+    /* Add styles for the right box */
+}
+
+#gamePage .game-container {
+    text-align: center;
+}
+
+#gamePage .word-row {
     display: flex;
     margin-bottom: 10px;
 }
 
-.letter-square {
+#gamePage .letter-square {
     width: 40px;
     height: 40px;
     border: 2px solid #333;
@@ -30,18 +103,18 @@ body {
     background-color: #333;
 }
 
-.letter-square.incorrect {
+#gamePage .letter-square.incorrect {
     animation: shake 0.5s ease-in-out;
     background-color: #FF4D4D; /* Red */
     color: #fff; /* set text color for visibility */
 }
 
-.letter-square.correct-position {
+#gamePage .letter-square.correct-position {
     background-color: #4CAF50; /* Green */
     color: #fff; /* set text color for visibility */
 }
 
-.letter-square.correct-letter {
+#gamePage .letter-square.correct-letter {
     background-color: #FFD700; /* Amber */
     color: #fff; /* set text color for visibility */
 }
