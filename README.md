@@ -39,6 +39,5 @@ Guess the word in the given category using the provided clues. Players have 6 to
 
 - Expansion of word categories.
 - Integration of a scoring system.
-- Multiplayer functionality for collaborative guessing.
 
 Feel free to contribute to the project by forking the repository and submitting pull requests. Your feedback and suggestions are highly appreciated!
