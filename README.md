@@ -1,6 +1,6 @@
-# Words: A Wordle Game
+# Verbiverse: A Wordle Game
 
-Wordle is a JavaScript-based game designed to challenge players to guess a random word. Created with simplicity and engagement in mind, it offers an interactive and enjoyable experience.
+Verbiverse is a JavaScript-based game designed to challenge players to guess a random word. Created with simplicity and engagement in mind, it offers an interactive and enjoyable experience.
 
 ## Objective
 
